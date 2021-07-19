@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Demo {
+  id: ID!
+  name: String!
+  address: String!
+  zip: String!
+  city: String!
+  age: Int!
+  email: String
+}
+
+type Query {
+  demo(id: String!): Demo!
+  demos(skip: Int = 0, take: Int = 25): [Demo!]!
+}
+
+type Mutation {
+  addDemo(input: DemoInput!): Demo!
+  editDemo(input: DemoUpdate!, id: String!): Demo!
+  removeDemo(id: String!): String!
+}
+
+input DemoInput {
+  name: String!
+  address: String!
+  zip: String!
+  city: String!
+  age: Int!
+  email: String
+}
+
+input DemoUpdate {
+  name: String!
+  address: String!
+  zip: String!
+  city: String!
+  age: Int!
+  email: String
+}
